@@ -19,25 +19,37 @@ public class SpringJwtApplication {
         SpringApplication.run(SpringJwtApplication.class, args);
     }
 
+    /**
+     * BCryptPasswordEncoder implementation.
+     * Uses the bcrypt algorithm to hash the passwords.
+     * @return the encoder
+     */
     @Bean
     PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * Function executing at the launch of the application,
+     * inserts some basic data in the mysql database
+     */
     @Bean
     CommandLineRunner run(UserService userService){
         return args -> {
-          userService.saveRole(new Role(null,"user"));
-          userService.saveRole(new Role(null,"admin"));
+          //If the database is not empty, default data is not added
+          if(userService.getUsers() != null) {
+              userService.saveRole(new Role(null, "user"));
+              userService.saveRole(new Role(null, "admin"));
 
-          userService.saveUser(new User(null,"alessandro","1234",new ArrayList<>()));
-          userService.saveUser(new User(null,"alessandro2","1234",new ArrayList<>()));
-          userService.saveUser(new User(null,"alessandro3","1234",new ArrayList<>()));
+              userService.saveUser(new User(null, "admin", "Xkxtxyglu@z9Afacb-k1", new ArrayList<>()));
+              userService.saveUser(new User(null, "alessandro", "Amtech21.", new ArrayList<>()));
+              userService.saveUser(new User(null, "daniel", "Amtech21.", new ArrayList<>()));
+              userService.saveUser(new User(null, "gaetan", "Amtech21.", new ArrayList<>()));
+              userService.saveUser(new User(null, "anh", "Amtech21.", new ArrayList<>()));
+              userService.saveUser(new User(null, "markou", "Amtech21.", new ArrayList<>()));
 
-          userService.addRoleToUser("alessandro", "admin");
-          userService.addRoleToUser("alessandro2", "user");
-          userService.addRoleToUser("alessandro3", "user");
-
+              userService.addRoleToUser("admin", "admin");
+          }
         };
     }
 }
