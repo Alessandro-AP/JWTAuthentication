@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mysql-auth:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=userservice
+    networks:
+      - spring_net
+  springboot-auth:
+    image: springboot-auth
+    ports:
+      - "8084:8080"
+    build:
+      context: "./"
+      dockerfile: "DockerFile"
+    depends_on:
+      - mysql-auth
+    networks:
+      - spring_net
+networks:
+  spring_net:

@@ -11,7 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>SpringJWT</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>SpringJWT</name>
     <description>SpringJWT</description>
     <properties>
@@ -76,7 +76,7 @@
     </dependencies>
 
     <build>
-        <finalName>ROOT</finalName>
+        <finalName>auth</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
