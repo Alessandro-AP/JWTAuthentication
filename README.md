@@ -78,10 +78,18 @@ The `docker-compose.yml` lets you bring up a complete docker development environ
 
 (Warning: make sure these ports are free, otherwise change them in the docker-compose.yml)
 ## Usage
-#TODO
-![login](reamde_images/login.png)
+Documentation swagger https://app.swaggerhub.com/apis-docs/gaetan.zwick/Authentication-MIcroservice/v1 
+
+Once the application has been launched, 2 actions are possible:
+**Register **: A user can register at the endpoint `/register` by sending an HTTP POST request containing a JSON body with username and password (as in the example)
 
 ![register](reamde_images/register.png)
+
+**Login** : A user can login to the `/login` endpoint by sending an HTTP POST request containing a JSON body with username and password (as in the example)
+
+![login](reamde_images/login.png)
+
+
 
 <!-- CONTACT -->
 ## Contact
