@@ -81,7 +81,7 @@ The `docker-compose.yml` lets you bring up a complete docker development environ
 Documentation swagger https://app.swaggerhub.com/apis-docs/gaetan.zwick/Authentication-MIcroservice/v1 
 
 Once the application has been launched, 2 actions are possible:
-**Register **: A user can register at the endpoint `/register` by sending an HTTP POST request containing a JSON body with username and password (as in the example)
+**Register**: A user can register at the endpoint `/register` by sending an HTTP POST request containing a JSON body with username and password (as in the example)
 
 ![register](reamde_images/register.png)
 
