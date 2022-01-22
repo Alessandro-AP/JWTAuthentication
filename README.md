@@ -77,7 +77,9 @@ The `docker-compose.yml` lets you bring up a complete docker development environ
 **springboot-auth** : Spring Boot REST API which runs on port 8084.<br>
 **mysql-auth** : MySQL DB which runs on port 3306
 
-(Warning: make sure these ports are free, otherwise change them in the docker-compose.yml)
+(**Warning**: make sure these ports are free, otherwise change them in the docker-compose.yml) <br>
+(**Warning**: Make sure that "mysql container" and "spring boot container" are both running because if the spring boot container starts before the mysql container is properly started the spring boot container will not start.
+In that case you will need to restart manually the spring boot container.)
 ## Usage
 Documentation swagger https://app.swaggerhub.com/apis-docs/gaetan.zwick/Authentication-MIcroservice/v1 
 

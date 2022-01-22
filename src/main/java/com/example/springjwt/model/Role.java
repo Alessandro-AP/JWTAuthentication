@@ -10,8 +10,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Domain object model class representing a role.
+ */
 @Entity
-@Data //Getters and Setters
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString

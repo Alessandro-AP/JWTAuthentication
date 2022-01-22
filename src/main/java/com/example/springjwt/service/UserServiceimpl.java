@@ -22,11 +22,11 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor //Create constructor for repositories
+@RequiredArgsConstructor
 // Creates a proxy that implements the same interface(s) of the class.
 // The calls are intercepted and the behaviors injected via the proxy mechanism.
 @Transactional
-@Slf4j // For logs
+@Slf4j
 public class UserServiceimpl implements  UserService, UserDetailsService {
     private final UserRepository userRepo;
     private final RoleRepository roleRepo;

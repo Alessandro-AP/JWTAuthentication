@@ -30,7 +30,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 /**
  * This filter is used to handle authentications and
  * provides a POST endpoint to the "/login" route.
- * It tries to find a username and password request parameter in the body and
+ * It tries to find a username and password in the body of request and
  * if it finds them, tries to authenticate the user with those values.
  */
 @Slf4j
@@ -47,8 +47,8 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
     /**
      * This method is called when the client makes an authentication attempt at the "/login" route.
      * To perform a login it is necessary to send a JSON object containing "username" and "password" fields.
-     * If authentication succeeds the underlying method sucessfulAuthentification is called.
-     * If the authentication fails the AuthentificationFailureHandler is called for handle the error.
+     * If authentication succeeds the underlying method successfulAuthentication is called.
+     * If the authentication fails the AuthenticationFailureHandler is called for handle the error.
      */
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {

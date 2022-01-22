@@ -8,8 +8,11 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Domain object model class representing a user.
+ */
 @Entity
-@Data //Getters and Setters
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
@@ -18,7 +21,7 @@ public class User {
     private Long id;
     private String username;
     private String password;
-    //When I fetch the collection from db, load all the roles
+    // When fetch the collection from db, load all the roles
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<Role> roles = new ArrayList<>();
 }

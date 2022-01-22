@@ -5,10 +5,18 @@ import com.example.springjwt.model.Role;
 
 import java.util.List;
 
+/**
+ * This service offers the following functionalities:
+ *  - Save user in db
+ *  - Save role in db
+ *  - Add role to user
+ *  - Get user by username
+ *  - Get all users
+ */
 public interface UserService {
-    User saveUser(User user); // Save user in db.
-    Role saveRole(Role role) throws Exception; // Save role in db.
-    void addRoleToUser(String username, String roleName); // Add role to user.
-    User getUser(String username); // Get user by username
-    List<User> getUsers(); // get all users (bad if we have a lot of users, better return 'n' users at a time)
+    User saveUser(User user);
+    Role saveRole(Role role) throws Exception;
+    void addRoleToUser(String username, String roleName);
+    User getUser(String username);
+    List<User> getUsers();
 }
