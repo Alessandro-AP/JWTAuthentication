@@ -1,7 +1,8 @@
 <div align="center">
   <h2>JWTAuthentication</h2>
   <p>
-    JWTAuthenticatio Project is a school practical project that aims to extend our skills on web app development and team work.
+    JWTAuthentication is a JWT based authentication micro service developped with Spring. It is part of a school practical project that aims to extend our skills on web app development and team work. Main project can be found here :
+    <a href="https://github.com/Ga-3tan/AMT_Project">https://github.com/Ga-3tan/AMT_Project</a>
   </p>
 </div>
 
@@ -80,16 +81,17 @@ The `docker-compose.yml` lets you bring up a complete docker development environ
 ## Usage
 Documentation swagger https://app.swaggerhub.com/apis-docs/gaetan.zwick/Authentication-MIcroservice/v1 
 
-Once the application has been launched, 2 actions are possible:
-**Register**: A user can register at the endpoint `/register` by sending an HTTP POST request containing a JSON body with username and password (as in the example)
+Once the application has been launched, two actions are possible:
+
+1. **Register**: A user can register at the endpoint `/register` by sending an HTTP POST request containing a JSON body with a username and a password (see the example below)
 
 ![register](reamde_images/register.png)
 
-**Login** : A user can login to the `/login` endpoint by sending an HTTP POST request containing a JSON body with username and password (as in the example)
+2. **Login** : A user can login to the `/login` endpoint by sending an HTTP POST request containing a JSON body with a username and a password (see the example below)
 
 ![login](reamde_images/login.png)
 
-
+---
 
 <!-- CONTACT -->
 ## Contact
