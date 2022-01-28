@@ -15,6 +15,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
+/**
+ * Customised Security, defines the behavior of our HTTP endpoints.
+ * It overrides the default security configuration.
+ */
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
@@ -28,6 +32,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
     }
 
+    /**
+     * Definition of security rules
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
