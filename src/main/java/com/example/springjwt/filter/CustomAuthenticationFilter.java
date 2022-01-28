@@ -77,7 +77,6 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) throws IOException {
         org.springframework.security.core.userdetails.User userDetails = (User)authentication.getPrincipal();
 
-        //TODO secure secret
         String SECRET_KEY = "czvFbg2kmvqbcu(7Ux+c";
 
         // Create the JWT token based on user.
