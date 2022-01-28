@@ -2,7 +2,7 @@
   <h2>JWTAuthentication</h2>
   <p>
     JWTAuthentication is a JWT based authentication micro service developped with Spring. It is part of a school practical project that aims to extend our skills on web app development and team work.<br>
-    <a href="https://github.com/Ga-3tan/AMT_Project/wiki"><strong>Explore the wiki »</strong></a><br><br>
+    <a href="https://github.com/Alessandro-AP/JWTAuthentication/wiki"><strong>Explore the wiki »</strong></a><br><br>
     Main project can be found here :
     <a href="https://github.com/Ga-3tan/AMT_Project">https://github.com/Ga-3tan/AMT_Project</a>
   </p>
