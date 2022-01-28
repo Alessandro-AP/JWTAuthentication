@@ -85,7 +85,7 @@ In that case you will need to restart manually the spring boot container.)
 ## Usage
 Documentation swagger https://app.swaggerhub.com/apis-docs/gaetan.zwick/Authentication-MIcroservice/v1 
 
-You can change the JWT encryption key of the JWT token in the file `CustomAuthenticationFilter`
+You can change the encryption key of the JWT token in the file `CustomAuthenticationFilter`
 
 Once the application has been launched, two actions are possible:
 
